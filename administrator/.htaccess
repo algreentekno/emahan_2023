@@ -1,0 +1,160 @@
+RewriteEngine on
+Options All -Indexes
+LimitRequestBody 10240000
+#enables you to access PHP files with HTML extension
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^$ php-version/index.php [L]
+RewriteRule ^(.*)\.html$ $1.php [NC]
+RewriteRule ^login$ content.php?module=login [L]
+RewriteRule ^dashboard$ content.php?module=dashboard [L]
+RewriteRule ^aksesilegal$ content.php?module=aksesilegal [L]
+RewriteRule ^logout$ content.php?module=logout [L]
+RewriteRule ^loginapp$ content.php?module=loginapp [L]
+RewriteRule ^kelembagaanlimbah$ content.php?module=kelembagaanlimbah [L]
+RewriteRule ^spaldlimbah$ content.php?module=spaldlimbah [L]
+RewriteRule ^ipltlimbah$ content.php?module=ipltlimbah [L]
+RewriteRule ^akseslimbah$ content.php?module=akseslimbah [L]
+RewriteRule ^kelembagaanairminum$ content.php?module=kelembagaanairminum [L]
+RewriteRule ^capaianairminum$ content.php?module=capaianairminum [L]
+RewriteRule ^spamreg$ content.php?module=spamreg [L]
+RewriteRule ^spamkab$ content.php?module=spamkab [L]
+RewriteRule ^spamikk$ content.php?module=spamikk [L]
+RewriteRule ^spamperdesaan$ content.php?module=spamperdesaan [L]
+RewriteRule ^rawanair$ content.php?module=rawanair [L]
+RewriteRule ^potensiairbaku$ content.php?module=potensiairbaku [L]
+RewriteRule ^kelembagaansampah$ content.php?module=kelembagaansampah [L]
+RewriteRule ^layanantpa$ content.php?module=layanantpa [L]
+RewriteRule ^layanantpst$ content.php?module=layanantpst [L]
+RewriteRule ^layanantps$ content.php?module=layanantps [L]
+RewriteRule ^aksessampah$ content.php?module=aksessampah [L]
+RewriteRule ^kawasankumuh$ content.php?module=kawasankumuh [L]
+RewriteRule ^kawasankumuhdiatas10ha$ content.php?module=kawasankumuhdiatas10ha [L]
+RewriteRule ^kawasankumuhdibawah10ha$ content.php?module=kawasankumuhdibawah10ha [L]
+RewriteRule ^perumahan$ content.php?module=perumahan [L]
+RewriteRule ^rtlh$ content.php?module=rtlh [L]
+RewriteRule ^identitas$ content.php?module=identitas [L]
+RewriteRule ^informasi$ content.php?module=informasi [L]
+RewriteRule ^halaman$ content.php?module=halaman [L]
+RewriteRule ^galeri$ content.php?module=galeri [L]
+RewriteRule ^downloaddata$ content.php?module=download [L]
+RewriteRule ^link$ content.php?module=link [L]
+RewriteRule ^kab$ content.php?module=kab [L]
+RewriteRule ^kec$ content.php?module=kec [L]
+RewriteRule ^kel$ content.php?module=kel [L]
+RewriteRule ^usermanager$ content.php?module=usermanager [L]
+RewriteRule ^kategori$ content.php?module=kategori [L]
+RewriteRule ^album$ content.php?module=album [L]
+RewriteRule ^kategoridownload$ content.php?module=kategoridownload [L]
+RewriteRule ^templatewebsite$ content.php?module=templatewebsite [L]
+RewriteRule ^galeriedit-(.*)$ content.php?module=galeriedit&key=$1 [L]
+RewriteRule ^lupapass$ content.php?module=lupapass [L]
+RewriteRule ^tahundata$ content.php?module=tahundata [L]
+RewriteRule ^menu$ content.php?module=menu [L]
+RewriteRule ^header$ content.php?module=header [L]
+
+#==========================AIRLIMBAH FORM AKSES ADMIN DAN PROV======================================
+RewriteRule ^spladadd$ content.php?module=spladadd [L]
+RewriteRule ^spladedit-(.*)$ content.php?module=spladedit&key=$1 [L]
+RewriteRule ^ipltadd$ content.php?module=ipltadd [L]
+RewriteRule ^ipltedit-(.*)$ content.php?module=ipltedit&key=$1 [L]
+#=========================AIRMINUM FORM======================================================
+RewriteRule ^spamregadd$ content.php?module=spamregadd [L]
+RewriteRule ^spamregedit-(.*)$ content.php?module=spamregedit&key=$1 [L]
+RewriteRule ^spamperdesaanadd$ content.php?module=spamperdesaanadd [L]
+RewriteRule ^spamperdesaanedit-(.*)$ content.php?module=spamperdesaanedit&key=$1 [L]
+RewriteRule ^spamkabadd$ content.php?module=spamkabadd [L]
+RewriteRule ^spamkabedit-(.*)$ content.php?module=spamkabedit&key=$1 [L]
+RewriteRule ^spamikkadd$ content.php?module=spamikkadd [L]
+RewriteRule ^spamikkedit-(.*)$ content.php?module=spamikkedit&key=$1 [L]
+#============================SAMPAH============================================================
+RewriteRule ^tpaadd$ content.php?module=tpaadd [L]
+RewriteRule ^tpaedit-(.*)$ content.php?module=tpaedit&key=$1 [L]
+RewriteRule ^tpsadd$ content.php?module=tpsadd [L]
+RewriteRule ^tpsedit-(.*)$ content.php?module=tpsedit&key=$1 [L]
+RewriteRule ^tpstadd$ content.php?module=tpstadd [L]
+RewriteRule ^tpstedit-(.*)$ content.php?module=tpstedit&key=$1 [L]
+#============================================================================================
+#AKSES OPERATOR
+#============================================================================================
+RewriteRule ^downloadtemplate$ content.php?module=downloadtemplate [L]
+RewriteRule ^uploaddataver$ content.php?module=uploaddataver [L]
+RewriteRule ^draftdataver$ content.php?module=draftdataver [L]
+RewriteRule ^downloadkodedesa$ content.php?module=downloadkodedesa [L]
+RewriteRule ^pesanmasukval$ content.php?module=pesanmasukval [L]
+RewriteRule ^pengajuanperubahandata$ content.php?module=pengajuanperubahandata [L]
+#============================================================================================
+#AKSES VALIDATOR
+#============================================================================================
+RewriteRule ^validasidata$ content.php?module=validasidata [L]
+RewriteRule ^validasidatacapaian$ content.php?module=validasidatacapaian [L]
+RewriteRule ^pesanmasuk$ content.php?module=pesanmasuk [L]
+RewriteRule ^riwayatkirimpesan$ content.php?module=riwayatkirimpesan [L]
+#============================================================================================
+#AKSES ADMIN PROVINSI
+#============================================================================================
+RewriteRule ^permintaaneditdata$ content.php?module=permintaaneditdata [L]
+RewriteRule ^targetdata$ content.php?module=targetdata [L]
+#============================================================================================
+RewriteRule ^rubahpass$ content.php?module=rubahpass [L]
+RewriteRule ^notif$ content.php?module=notif [L]
+#=============================================================================================
+# PENDATAAN RTLH
+#=============================================================================================
+RewriteRule ^pendataan$ content.php?module=pendataan [L]
+RewriteRule ^pendataankumuh$ content.php?module=pendataankumuh [L]
+RewriteRule ^importpendataan$ content.php?module=importpendataan [L]
+RewriteRule ^lihatpendataan$ content.php?module=lihatpendataan [L]
+RewriteRule ^lihatpendataan1-(.*)$ content.php?module=lihatpendataan1&key=$1 [L]
+RewriteRule ^editpendataan-(.*)$ content.php?module=editpendataan&key=$1 [L]
+#=============================================================================================
+# PENDATAAN VERIFIKASI
+#=============================================================================================
+RewriteRule ^verifikasi$ content.php?module=verifikasi [L]
+RewriteRule ^lihatverifikasi$ content.php?module=lihatverifikasi [L]
+#=============================================================================================
+# PENDATAAN PENANGANAN
+#=============================================================================================
+RewriteRule ^penanganan$ content.php?module=penanganan [L]
+RewriteRule ^lihatpenanganan$ content.php?module=lihatpenanganan [L]
+#==============================================================================================
+RewriteRule ^petasebaran$ content.php?module=petasebaran [L]
+RewriteRule ^uploaddatapendataan-(.*)$ content.php?module=uploaddatapendataan&key=$1 [L]
+RewriteRule ^draftpendataan$ content.php?module=draftpendataan [L]
+#=============================================================================================
+RewriteRule ^lappendataan$ content.php?module=lappendataan [L]
+RewriteRule ^lapverifikasi$ content.php?module=lapverifikasi [L]
+RewriteRule ^lappenanganan$ content.php?module=lappenanganan [L]
+RewriteRule ^lapcapaian$ content.php?module=lapcapaian [L]
+RewriteRule ^uploadfoto$ content.php?module=uploadfoto [L]
+RewriteRule ^batalpendataan$ content.php?module=batalpendataan [L]
+RewriteRule ^lapstatistik$ content.php?module=lapstatistik [L]
+RewriteRule ^lapmilik$ content.php?module=lapmilik [L]
+RewriteRule ^uploadbuktidukung$ content.php?module=uploadbuktidukung [L]
+RewriteRule ^lihatdatabukti$ content.php?module=lihatdatabukti [L]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

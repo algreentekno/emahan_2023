@@ -1,0 +1,49 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^$ php-version/index.php [L]
+RewriteRule ^(.*)\.html$ $1.php [NC]
+RewriteRule ^beranda$ content_main.php?module=home [L]
+RewriteRule ^berita-(.*)$ content_main.php?module=detailberita&judul=$1
+RewriteRule ^kategori-(.*)$ content_main.php?module=detailkategori&id=$1 [L]
+RewriteRule ^halkategori-(.*)-(.*)$ content_main.php?module=detailkategori&id=$1&halkategori=$2 [L]
+RewriteRule ^cariberita$ content_main.php?module=cariberita&id=$1 [L]
+RewriteRule ^album$ content_main.php?module=album [L]
+RewriteRule ^halalbum-(.*)$ content_main.php?module=album&halalbum=$1 [L]
+RewriteRule ^galeri-(.*)$ content_main.php?module=galeri&id=$1 [L]
+RewriteRule ^halgaleri-(.*)-(.*)$ content_main.php?module=galeri&id=$1&halgaleri=$2 [L] 
+RewriteRule ^halaman-(.*)$ content_main.php?module=halamanstatis&key=$1 [L]
+RewriteRule ^kontak$ content_main.php?module=kontak&id=$1 [L]
+RewriteRule ^not-found$ error.php?module=notfound&id=$1 [L]
+RewriteRule ^kategoridownload-(.*)$ content_main.php?module=kategoridownload&id=$1 [L]
+#================================================================================
+RewriteRule ^iplt$ content_main.php?module=iplt [L]
+RewriteRule ^spald$ content_main.php?module=spald [L]
+RewriteRule ^kelembagaanairlimbah$ content_main.php?module=kelembagaanairlimbah [L]
+#=================================================================================
+RewriteRule ^spamreg$ content_main.php?module=spamreg [L]
+RewriteRule ^spamkab$ content_main.php?module=spamkab [L]
+RewriteRule ^spamikk$ content_main.php?module=spamikk [L]
+RewriteRule ^spamdesa$ content_main.php?module=spamdesa [L]
+RewriteRule ^rawanair$ content_main.php?module=rawanair [L]
+RewriteRule ^airbaku$ content_main.php?module=airbaku [L]
+RewriteRule ^kelembagaanairminum$ content_main.php?module=kelembagaanairminum [L]
+#==================================================================================
+RewriteRule ^tps$ content_main.php?module=tps [L]
+RewriteRule ^tpst$ content_main.php?module=tpst [L]
+RewriteRule ^tpa$ content_main.php?module=tpa [L]
+RewriteRule ^kelembagaansampah$ content_main.php?module=kelembagaansampah [L]
+#==================================================================================
+RewriteRule ^kumuhdiatas10ha$ content_main.php?module=kumuhdiatas10ha [L]
+RewriteRule ^kumuhdibawah10ha$ content_main.php?module=kumuhdibawah10ha [L]
+RewriteRule ^rtlh$ content_main.php?module=rtlh [L]
+RewriteRule ^perumahan$ content_main.php?module=perumahan [L]
+#===================================================================================
+RewriteRule ^petasebaran$ content_main.php?module=petasebaran [L]
+RewriteRule ^capaianlimbah$ content_main.php?module=capaianlimbah [L]
+RewriteRule ^capaianairminum$ content_main.php?module=capaianairminum [L]
+RewriteRule ^capaiansampah$ content_main.php?module=capaiansampah [L]
+#=================================================================================
+RewriteRule ^basisdata$ content_main.php?module=basisdata [L]
+RewriteRule ^penanganan$ content_main.php?module=penanganan [L]
+RewriteRule ^kumuh$ content_main.php?module=kumuh [L]
