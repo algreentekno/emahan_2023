@@ -1,7 +1,6 @@
 <?php
 include "../config/koneksi_li.php";
 ?>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJ7ATf0VMQX0nJS_-tI6oIk80R_3H2pOI&callback=initMap" type="text/javascript"></script>
 <script type="text/javascript">
  
 (function() {
