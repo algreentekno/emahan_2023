@@ -180,7 +180,6 @@ date_default_timezone_set('Asia/Jakarta');
     <script src="<?php echo "$f[folder]/assets/js/jquery.validate.min.js";?>"></script>
     <script src="<?php echo "$f[folder]/themes/lara/assets/js/script.js";?>"></script>
     <script src="<?php echo "$f[folder]/themes/lara/assets/js/owl.carousel.min.js";?>"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJ7ATf0VMQX0nJS_-tI6oIk80R_3H2pOI&callback=initMap" type="text/javascript"></script>
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
